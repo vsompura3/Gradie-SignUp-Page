@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+/** Custom Properties **/
+:root {
+	--ff-base: "Roboto", "Operator Mono", sans-serif;
+
+	--clr-primary-100: #023242;
+	--clr-primary-200: #85bfd3;
+}
+
+/** Reset **/
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: var(--ff-base);
+	font-weight: 400;
+	font-size: 1.125rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	line-height: 1.1;
+	font-weight: 600;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button {
+	font: inherit;
+}
+
+.container {
+	background: #fff;
+	max-height: 35rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-bottom: 0.25em;
+}
+
+p {
+	color: var(--clr-primary-200, lightblue);
+}
+
+.one {
+	background: var(--clr-primary-100, teal);
+	color: #fff;
+	text-align: center;
+	padding: 3em 0 0;
+}
+
+.one img {
+	margin-top: -2em;
+}
+
+.two {
+	padding: 3em 2em;
+}
+
+.two h2 {
+	margin-bottom: 0.5em;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25em;
+}
+
+.form-group {
+	display: flex;
+	gap: 0.25em;
+	flex-direction: column;
+	flex-basis: 100%;
+}
+
+.check-group {
+	flex-direction: row;
+	align-items: baseline;
+	gap: 0.5em;
+}
+
+.form-group:not(.check-group) label {
+	font-weight: 700;
+}
+
+.form-group input {
+	font-size: 1rem;
+	border: 1px solid #777;
+	border-radius: 3px;
+}
+
+.check-group input {
+	-webkit-accent-color: var(--clr-primary-100, teal);
+	-moz-accent-color: var(--clr-primary-100, teal);
+	-o-accent-color: var(--clr-primary-100, teal);
+	accent-color: var(--clr-primary-100, teal);
+}
+
+.check-group a {
+	font-weight: 700;
+	color: var(--clr-primary-100, teal);
+	border-bottom: 2px solid var(--clr-primary-100, teal);
+}
+
+.form-group button {
+	border: none;
+	border-radius: 3px;
+	background: var(--clr-primary-100, teal);
+	color: #fff;
+}
+
+.form-group:not(.check-group) input,
+.form-group button {
+	padding: 0.75em;
+}
+
+@media screen and (max-width: 18.25em) {
+	body {
+		font-size: 1rem;
+	}
+
+	.two {
+		padding: 3em 1em;
+	}
+}
+
+@media screen and (min-width: 45em) {
+	body {
+		background-image: url("./Assets/Background.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100vh;
+		display: grid;
+		place-items: center;
+	}
+
+	.container {
+		display: flex;
+		max-width: 40em;
+		border-radius: 6px;
+		overflow: hidden;
+	}
+
+	.one img {
+		margin-top: 0;
+	}
+
+	.one,
+	.two {
+		flex-basis: 50%;
+	}
+
+	h2 {
+		margin-bottom: 0.5em;
+	}
+
+	form {
+		align-content: space-between;
+		gap: 1.5em;
+	}
+
+	.form-group:not(.check-group) {
+		gap: 0.5em;
+	}
+}
